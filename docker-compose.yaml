@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  db-dev:
+    container_name: pdd-postgres-dev
+    image: postgres:13
+    environment:
+      POSTGRES_USER: pdd
+      POSTGRES_PASSWORD: psqlLocalPsql
+      POSTGRES_DB: pdd
+    ports:
+      - "5432:5432"
+    volumes:
+      - psql-dev:/var/lib/postgresql/data
+volumes:
+  psql-dev:
+    name: pdd-psql-dev-00

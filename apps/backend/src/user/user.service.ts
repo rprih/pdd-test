@@ -8,8 +8,4 @@ export class UserService {
   findAll() {
     return this.prisma.user.findMany()
   }
-
-  findOne(id: number) {
-    return `This action returns a #${id} user`
-  }
 }
